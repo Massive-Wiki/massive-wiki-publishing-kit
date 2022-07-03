@@ -8,7 +8,7 @@ Use Markdown, or just type text -- either way works.
 
 Use double square brackets around words to make links to other pages in this wiki.
 
-## Publishing Wiki To Website Locally
+## For Publishing Wiki To Website
 
 ### Massive Wiki Builder
 
