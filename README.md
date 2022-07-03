@@ -12,7 +12,7 @@ Use double square brackets around words to make links to other pages in this wik
 
 ### Massive Wiki Builder
 
-(Feel free to skip this section, this information is not needed to edit the wiki.)
+**THIS FOLLOWING IS AN ADVANCED TOPIC.** You do not need the following information if you just want to edit your wiki.
 
 You can use [Massive Wiki Builder](https://github.com/peterkaminski/massivewikibuilder) to publish (export) any Massive Wiki to static HTML files. The wiki is then in a format viewable by anyone with a web browser.
 
