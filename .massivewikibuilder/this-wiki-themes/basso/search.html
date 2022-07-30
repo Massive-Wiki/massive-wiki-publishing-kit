@@ -1,4 +1,9 @@
-{% set page_title = title ~ ' - ' ~ wiki_title if title != 'README' else wiki_title %}{% include '_header.html' %}
+{% set page_title = 'Search - ' ~ wiki_title %}{% include '_header.html' %}
+  <style> <!-- TODO: move this to a CSS file -->
+    ul#resList{list-style-position: inside;margin-left:3em;}
+    li.item{list-style:none; padding:5px;}
+    div#renderList{margin-top:1.5em;}
+  </style>
   <body class="has-navbar-fixed-top">
     {% include '_navbar.html' %}
     <section class="section">
@@ -11,7 +16,10 @@
 	  </div>
 	  <div class="column">
             <div class="content markdown-body">
-              {{ markdown_body }}
+	      <h1>Search in {{wiki_title}}</h1>
+	      <input type="text" placeholder="type search words" id="inputID">
+	      <button type="button" onclick="doSearch();" id="searchButton">Search</button>
+	      <div id="renderList"></div>
             </div>
 	  </div>
 	</div>
