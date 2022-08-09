@@ -8,55 +8,12 @@
     <link rel="stylesheet" href="/mwb-static/css/mystyles.css">
     <link rel="stylesheet" href="/mwb-static/css/markdown.css">
     <link rel="stylesheet" href="/mwb-static/css/sidebar.css">
-    <link rel="stylesheet" href="/mwb-static/css/custom.css">
     {% if lunr_index_sitepath != '' %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
     <script src="{{lunr_index_sitepath}}"></script>
     <script>var index = lunr.Index.load(lunr_index)</script>
+    {% endif %}
     {% if lunr_posts_sitepath != '' %}
     <script src="{{lunr_posts_sitepath}}"></script>
-    {% endif %}
-    <script>
-      function doSearch() {
-	  let searchString=document.getElementById("inputID").value;
-	  var ul = document.createElement('ul');
-	  ul.setAttribute('id','resList');
-	  const searchResultList = index.search(searchString).map((item) => {
-	      return lunr_posts.find((post) => item.ref === post.link)
-	  })
-	  render_list = document.getElementById('renderList');
-	  removeAllChildNodes(render_list);
-	  render_list.appendChild(ul);
-          searchResultList.forEach(renderResultList);
-	  function renderResultList(element, index, arr) {
-            var anchor = document.createElement('a');
-            anchor.append(document.createTextNode(`${element.title}`));
-            anchor.setAttribute('class', 'wikilink');
-            anchor.setAttribute('href',`${element.link}`);
-            anchor.setAttribute('target', '_blank');
-            var li = document.createElement('li');
-            li.setAttribute('class','item');
-            li.append(anchor);
-            ul.append(li);
-          }
-      }
-    </script>
-    <script>
-      <!-- search on Enter in input textbox -->
-      var input_id = document.getElementById('inputID')
-      input_id.addEventListener('keypress', function(event) {
-	  if (event.key === "Enter") {
-	      event.preventDefault();
-	      document.getElementById("searchButton").click();
-	  }
-      });
-    </script>
-    <script>
-      function removeAllChildNodes(parent) {
-	  while (parent.firstChild) {
-              parent.removeChild(parent.firstChild);
-	  }
-      }
-    </script>
     {% endif %}
   </head>
