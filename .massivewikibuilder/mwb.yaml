@@ -1,0 +1,14 @@
+# the title of your wiki
+wiki_title: Our Massive Wiki
+
+# the author of your wiki
+author: Our Wiki Team
+
+# the centralized Git repo (an HTML link is good)
+repo: '<a href="https://github.com/your-organization/your-repo">GitHub/your-organization/your-repo</a>'
+
+# the license for the wiki (a Creative Commons HTML link is good)
+license: '<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>'
+
+# the markdown page which will be handled as a sidebar page
+sidebar: Sidebar.md
