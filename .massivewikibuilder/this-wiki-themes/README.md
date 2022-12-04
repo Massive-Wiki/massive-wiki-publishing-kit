@@ -1,6 +1,6 @@
 # Massive Wiki Themes
 
-Version 2022-08-09-001.
+Version 2022-12-04-001.
 
 Massive Wiki Builder and Missive Weaver use a simple theming system.  All the files for one theme are placed in a subdirectory in the themes directory, usually `massive-wiki-themes`.  For example, the Alto theme is in `massive-wiki-themes/alto`, and to use the Alto theme, pass `-t massive-wiki-themes/alto` to MWB.
 
@@ -29,7 +29,7 @@ The `.` character is important when the MWB workspace directory is within the wi
 ------ mwb.yaml # config for this wiki
 ------ massivewikibuilder/ # MWB
 ------ massive-wiki-themes/ # off-the-shelf themes, not customized
--------- alto/ # a specific theme, customized for this wiki
+-------- alto/ # a specific theme, not customized
 ------ this-wiki-themes/ # theme(s) used for this wiki
 -------- alto/ # a specific theme, customized for this wiki
 ------ output/ # MWB writes .html, .md, and .json files here

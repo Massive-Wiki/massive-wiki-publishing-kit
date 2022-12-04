@@ -1,5 +1,7 @@
 # Your Massive Wiki
 
+Version 2022-12-04-001.
+
 ## What This Repo Is For
 
 If you're seeing this on GitHub, click "Use this template" to make your own copy of this repo. Or, you can create a fork, or just clone this repo any other way.
