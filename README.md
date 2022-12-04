@@ -1,4 +1,10 @@
-# Our Massive Wiki
+# Your Massive Wiki
+
+## What This Repo Is For
+
+If you're seeing this on GitHub, click "Use this template" to make your own copy of this repo. Or, you can create a fork, or just clone this repo any other way.
+
+This repo is great to start with if you'll ever want to use Massive Wiki Builder to publish your wiki to the web. If you don't need that capability, you can usually just start a Massive Wiki with an empty directory and Git and your favorite Markdown editor.
 
 ## For Editing Wiki Files
 
