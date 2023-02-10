@@ -1,6 +1,6 @@
 # Your Massive Wiki
 
-Version 2022-12-04-001.
+Version 2023-02-09-001.
 
 ## What This Repo Is For
 
@@ -45,6 +45,20 @@ git submodule init
 git submodule update
 ```
 
+When the upstream Massive Wiki Builder or Massive Wiki Themes repos have been updated, your submodules won't automatically update. Conceptually, they are "pinned" to the Git hash you set them up with.
+
+To upgrade your submodules to the latest upstream version, you can use these commands:
+
+```shell
+cd .massivewikibuilder
+git submodule init
+git submodule update --remote --merge massivewikibuilder
+git submodule update --remote --merge massive-wiki-themes
+```
+
+After that, `git status` will show that there have been changes to the submodules. Use your regular add, commit, and push process to update your repo.
+
+
 See the [Submodules chapter of the Git Book](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for more information about Git submodules.
 
 ### Themes
@@ -52,3 +66,5 @@ See the [Submodules chapter of the Git Book](https://git-scm.com/book/en/v2/Git-
 This starter wiki is set up with two MWB / MWT themes, Alto and Basso, in the `.massivewikibuilder/this-wiki-themes` folder. We suggest you continue to use and customize your wiki's themes in the `this-wiki-themes` folder.
 
 The Massive Wiki Themes repo is updated from time to time, and when you refresh your local Git submodule in `.massivewikibuilder/massive-wiki-themes`, you'll receive those updates. Rather than use those themes directly, though, it is suggested to copy what you want into your `this-wiki-themes` folder, and customize and use your copy of the themes from there.
+
+After you update `massive-wiki-themes`, you can compare (with `diff` or another tool) the upstream theme in `massive-wiki-themes` and your customized version of it in `this-wiki-themes`, and port over any changes you want.

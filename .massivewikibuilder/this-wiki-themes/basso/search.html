@@ -17,8 +17,13 @@
 	  <div class="column">
             <div class="content markdown-body">
 	      <h1>Search in {{wiki_title}}</h1>
+              {% if lunr_index_sitepath != '' %}
 	      <input type="text" placeholder="type search words" id="inputID">
 	      <button type="button" onclick="doSearch();" id="searchButton">Search</button>
+              {% else %}
+	      <p>Lunr search index is not present. It must be enabled by passing the <code>--lunr</code> flag to <code>mwb.py</code>.</p>
+	      <p>Check the Massive Wiki Builder documentation for more details.</p>
+              {% endif %}
 	      <div id="renderList"></div>
             </div>
 	  </div>
@@ -70,6 +75,7 @@
       document.addEventListener('DOMContentLoaded', () => {
 	// search on Enter
 	var input_id = document.getElementById('inputID')
+	input_id.focus()
 	input_id.addEventListener('keypress', function(event) {
 	  if (event.key === "Enter") {
 	    event.preventDefault();
