@@ -18,9 +18,20 @@ Use double square brackets around words to make links to other pages in this wik
 
 ## For Publishing Wiki To Website
 
-### Massive Wiki Builder
-
 **THIS FOLLOWING IS AN ADVANCED TOPIC.** You do not need the following information if you just want to edit your wiki.
+
+### Getting Started Locally Quickly
+
+- install [Python](https://www.python.org/downloads/) minimum version 3.8 but latest should work
+- `git submodule init`
+- `git submodule update`
+- `cd .massivewikibuilder/massivewikibuilder`
+- `pip install -r requirements.txt`
+- `npm ci`
+- build: `./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso --lunr`
+- run your local web server on the `.massivewikibuilder/massivewikibuilder/output` folder
+
+### Install Explination
 
 You can use [Massive Wiki Builder](https://github.com/peterkaminski/massivewikibuilder) to publish (export) any Massive Wiki to static HTML files. The wiki is then in a format viewable by anyone with a web browser.
 
@@ -57,7 +68,6 @@ git submodule update --remote --merge massive-wiki-themes
 ```
 
 After that, `git status` will show that there have been changes to the submodules. Use your regular add, commit, and push process to update your repo.
-
 
 See the [Submodules chapter of the Git Book](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for more information about Git submodules.
 
