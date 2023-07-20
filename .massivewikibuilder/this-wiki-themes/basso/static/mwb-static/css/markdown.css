@@ -96,4 +96,3 @@
 .task-list-item.enabled label { cursor: pointer; }
 .task-list-item+.task-list-item { margin-top: 3px; }
 .task-list-item-checkbox { float: left; margin: .31em 0 .2em -1.3em !important; vertical-align: middle; cursor: default !important; }
-

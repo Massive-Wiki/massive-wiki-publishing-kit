@@ -12,6 +12,17 @@
 	  <div class="column">
             <div class="content markdown-body">
               {{ markdown_body }}
+	      {% if backlinks %}
+	      <hr>
+	      <div>
+		<h4>Pages that link to this page</h4>
+		<ul>
+		  {% for link in backlinks %}
+		    <li><a href="{{link[0]}}">{{link[1]}}</a>
+		  {%- endfor -%}
+		</ul>
+	      </div>
+	      {% endif %}
             </div>
 	  </div>
 	</div>
@@ -19,8 +30,6 @@
     </section>
     {% include '_footer.html' %}
     <script>{% include '_javascript.html' %}</script>
-<!-- uncomment to add Hypothes.is
     <script src="https://hypothes.is/embed.js" async></script>
--->
   </body>
 </html>

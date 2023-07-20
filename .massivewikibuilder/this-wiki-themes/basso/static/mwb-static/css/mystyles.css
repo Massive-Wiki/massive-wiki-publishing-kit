@@ -7757,3 +7757,54 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+/* make space around All Pages table */
+div#allPagesTableWrapper {
+    margin: 3em 4em 1em 4em;
+}
+
+/* incipient link */
+span.incipient-wikilink {
+  color: #dd3333;
+  position: relative;
+  display: inline-block;
+  text-decoration: underline dashed;
+  cursor: pointer;
+}
+
+/* body of incipient link popup */
+span.incipient-wikilink::before {
+  content: "No page exists for this link yet, but one may be created in the future.";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ee8;
+  color: #000;
+  padding: .1em .5em .1em .5em;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+/* display the incipient link popup */
+span.incipient-wikilink:hover::before {
+  opacity: 1;
+}
+
+/* the small "speech bubble" triangle under the incipient link popup */
+span.incipient-wikilink:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: .5em solid transparent;
+  border-top-color: #ee8;
+  border-bottom: 0;
+  margin-left: -.5em;
+  margin-bottom: -.5em;
+}
