@@ -1,0 +1,24 @@
+-*- mode: org; -*-
+
+# mwpkTODO
+
+* 20231214 massive-wiki-pub-kit to-do list
+:PROPERTIES:
+:CUSTOM_ID: todo
+:END:
+
+
+* 2023-12-14 the task list:
+** Wiki personalization documentation:
+*** TODO include information on editing =mwb.yaml= to reflect your wiki  
+*** TODO include information about editing your _footer.html if you want  
+*** TODO include information about setting up the sidebar  
+    - clean up and clarify what is delivered in this repo  
+*** TODO run some tests on this repository and verify this documentation  
+*** DONE edit the MWB URLs to point to the current repositories: 2023-12-21:  
+*** TODO remove the "Massive Wiki Themes" references and clarify how the current theming works  
+*** TODO review and update, if needed, the contents of this repo (all the READMEs)  
+
+** Bonus:
+*** TODO document "Use as a template" to start with your own copy of this repo  
+*** TODO document how to set up a Netlify site  
